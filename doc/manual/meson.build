@@ -36,12 +36,6 @@ conf_file_json = custom_target(
   env : nix_env_for_docs,
 )
 
-nix_exp_features_json = custom_target(
-  command : [nix, '__dump-xp-features'],
-  capture : true,
-  output : 'xp-features.json',
-)
-
 language_json = custom_target(
   command: [nix, '__dump-language'],
   output : 'language.json',
